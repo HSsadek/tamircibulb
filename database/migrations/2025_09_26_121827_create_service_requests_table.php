@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('service_requests', function (Blueprint $table) {
             $table->id();
             $table->string('company_name');
-            $table->enum('service_type', ['authorized', 'private', 'independet'])->default('independet');
+            $table->enum('service_type', ['authorized', 'private', 'independent'])->default('independent');
             $table->text('description');
             $table->string('address');
             $table->string('phone');

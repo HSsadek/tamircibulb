@@ -3,6 +3,4 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceRegisterRequestController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('/service-requests', [ServiceRegisterRequestController::class, 'store']);
