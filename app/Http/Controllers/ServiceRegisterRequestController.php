@@ -30,4 +30,16 @@ class ServiceRegisterRequestController extends Controller
             'data' => $serviceRequest
         ], 201);
     }
+
+
+    public function getServiceRequests()
+    {
+        // created_at alanına göre her zaman ASC sıralama
+        $serviceRequests = ServiceRegisterRequest::orderBy('created_at', 'asc')->get();
+
+        return response()->json([
+            'status' => 'success',
+            'data' => $serviceRequests
+        ]);
+    }
 }
